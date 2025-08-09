@@ -1,6 +1,22 @@
 # Overview
 
-The Pillars of Eternity Farsi Translation Tool is a Python CLI application that translates game text files from English to Farsi using OpenAI's GPT-4o model. The tool is specifically designed to handle Pillars of Eternity .stringtable XML files while preserving game-specific formatting, placeholders, and structure. It features smart caching to avoid redundant translations, glossary support for consistent terminology, and multiple operation modes for cost estimation, translation, and quality verification.
+The Pillars of Eternity Farsi Translation Tool is a Python CLI application that creates a complete Farsi language mod for Pillars of Eternity. It translates all 1,116 game text files from English to Farsi using OpenAI's GPT-4o model, then outputs them in the exact format needed for game installation.
+
+## Deliverable: Complete Farsi Language Mod
+
+**What it creates:**
+- Complete Farsi translation of all game text (conversations, quests, UI, items, etc.)
+- Properly formatted .stringtable XML files that match game's structure exactly
+- Safe installation into Italian language slot (preserves game integrity)
+- Easy switching between English and Farsi via in-game language menu
+
+**Game Integration:**
+- Output structure: `out/localized/it/text/` (replaces Italian language files)
+- User copies this to game's `localized/it/` directory
+- Select "Italiano" in game settings to use Farsi translation
+- Fully reversible - can switch back to English anytime
+
+The tool preserves all game-specific formatting, placeholders, character names, and technical elements while providing professional-quality contextual translations.
 
 ## Project Status: TOOL STABILITY IMPROVED ✅
 - Tool completely fixed and consolidated (Aug 9, 2025)

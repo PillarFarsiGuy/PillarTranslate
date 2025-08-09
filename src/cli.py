@@ -126,6 +126,17 @@ def build_command(input_dir: str, output_dir: str = "out") -> None:
     if processed_files < total_files:
         remaining = total_files - processed_files
         logger.warning(f"{remaining} files were skipped or failed. Check logs for details.")
+    
+    logger.info("="*60)
+    logger.info("FARSI LANGUAGE MOD READY FOR INSTALLATION")
+    logger.info("="*60)
+    logger.info(f"Output location: {output_path}/localized/it/text/")
+    logger.info("Installation:")
+    logger.info("1. Copy the 'it' folder to your game's localized/ directory")
+    logger.info("2. In game: Options → Language → Italiano")
+    logger.info("3. Restart the game")
+    logger.info("See INSTALLATION_GUIDE.md for detailed instructions")
+    logger.info("="*60)
 
 def main():
     """Main entry point for the CLI."""
