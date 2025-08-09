@@ -56,11 +56,20 @@ def build_command(input_dir: str, output_dir: str = "out") -> None:
         # Map to Italian language slot in output
         output_file_path = output_path / "localized" / "it" / "text" / relative_path
         
-        # CHECK OUTPUT FILE INSTEAD OF CACHE
+        # CHECK OUTPUT FILE INSTEAD OF CACHE - ENHANCED PRESERVATION
         if output_file_path.exists():
-            logger.info(f"Skipping existing file ({processed_files + 1}/{total_files}): {relative_path}")
-            processed_files += 1
-            continue
+            # Verify the existing file is valid and complete
+            try:
+                existing_entries = xml_processor.parse_stringtable(output_file_path)
+                if existing_entries:  # File exists and has content
+                    logger.info(f"Skipping existing completed file ({processed_files + 1}/{total_files}): {relative_path}")
+                    processed_files += 1
+                    continue
+                else:
+                    logger.warning(f"Found empty output file, will regenerate: {relative_path}")
+            except Exception as e:
+                logger.warning(f"Found corrupted output file, will regenerate: {relative_path} - {e}")
+            # If file is empty or corrupted, continue to regenerate it
         
         logger.info(f"Processing ({processed_files + 1}/{total_files}): {relative_path}")
         
@@ -76,13 +85,19 @@ def build_command(input_dir: str, output_dir: str = "out") -> None:
                 processed_files += 1
                 continue
             
-            # Extract texts for translation
-            texts_to_translate = [entry["text"] for entry in entries if entry["text"].strip()]
+            # Extract texts for translation with additional validation
+            texts_to_translate = []
+            for entry in entries:
+                text = entry["text"].strip()
+                if text and translator._is_valid_game_text(text):
+                    texts_to_translate.append(text)
             
             if not texts_to_translate:
-                # No texts to translate, just copy structure
+                # No valid texts to translate, just copy structure
+                logger.info(f"No valid game text found in {relative_path}, copying structure only")
                 translated_entries = entries
             else:
+                logger.info(f"Found {len(texts_to_translate)} valid text entries to translate in {relative_path}")
                 # Translate texts
                 translated_texts = translator.translate_batch(texts_to_translate, batch_size=config.batch_size)
                 
@@ -91,10 +106,15 @@ def build_command(input_dir: str, output_dir: str = "out") -> None:
                 text_index = 0
                 for entry in entries:
                     new_entry = entry.copy()
-                    if entry["text"].strip():
+                    original_text = entry["text"].strip()
+                    if original_text and translator._is_valid_game_text(original_text):
                         if text_index < len(translated_texts):
                             new_entry["text"] = translated_texts[text_index]
                             text_index += 1
+                        else:
+                            # Keep original if translation failed
+                            logger.warning(f"No translation available for: {original_text[:50]}...")
+                    # Keep original text for invalid entries (preserves structure)
                     translated_entries.append(new_entry)
             
             # Ensure output directory exists

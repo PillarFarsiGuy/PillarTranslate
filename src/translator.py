@@ -163,6 +163,30 @@ class TranslationService:
         results = self._translate_batch_internal([text])
         return results[0] if results else text
     
+    def _is_valid_game_text(self, text: str) -> bool:
+        """Validate that text appears to be legitimate game content."""
+        if not text or not text.strip():
+            return False
+        
+        # Skip very short texts (likely not meaningful game content)
+        if len(text.strip()) < 3:
+            return False
+        
+        # Skip texts that look like file paths or system messages
+        if any(indicator in text.lower() for indicator in [
+            "c:\\", "/home/", "/usr/", ".exe", ".dll", ".so", ".dylib",
+            "python", "import", "from", "def ", "class ", "if __name__",
+            "error:", "warning:", "debug:", "info:", "traceback"
+        ]):
+            return False
+        
+        # Skip texts that are mostly numbers or special characters
+        alphanumeric_count = sum(1 for c in text if c.isalnum())
+        if alphanumeric_count < len(text) * 0.3:  # Less than 30% alphanumeric
+            return False
+        
+        return True
+
     def _translate_batch_internal(self, texts: List[str]) -> List[str]:
         """Internal method to translate multiple texts in a single API call."""
         if not texts:
@@ -175,6 +199,12 @@ class TranslationService:
         for i, text in enumerate(texts):
             if not text or not text.strip():
                 results[i] = text
+                continue
+            
+            # Validate that this looks like legitimate game text
+            if not self._is_valid_game_text(text):
+                self.logger.warning(f"Skipping invalid/suspicious text: {text[:50]}...")
+                results[i] = text  # Keep original text instead of translating
                 continue
                 
             cached_translation = self.cache.get_translation(text)
