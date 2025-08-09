@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<StringTableFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Name>07_cv_ambushers</Name><NextEntryID>3</NextEntryID><EntryCount>2</EntryCount><Entries><Entry ID=""><DefaultText>"تو اینجا را ترک نخواهی کرد."</DefaultText><FemaleText>"تو اینجا را ترک نخواهی کرد."</FemaleText></Entry><Entry ID=""><DefaultText>"کمین!"</DefaultText><FemaleText>"کمین!"</FemaleText></Entry></Entries></StringTableFile>

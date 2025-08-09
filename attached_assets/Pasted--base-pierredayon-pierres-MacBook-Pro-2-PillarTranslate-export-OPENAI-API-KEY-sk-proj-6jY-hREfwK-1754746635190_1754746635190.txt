@@ -1,0 +1,49 @@
+(base) pierredayon@pierres-MacBook-Pro-2 PillarTranslate % export OPENAI_API_KEY="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"                                                 
+python3 stringtable_fa_builder.py build "./input/localized/en/text" --output ./out
+2025-08-09 15:31:29,644 - src.cli - INFO - Starting translation build from: input/localized/en/text
+2025-08-09 15:31:29,644 - src.cli - INFO - Output directory: out
+2025-08-09 15:31:29,654 - src.cli - INFO - Pre-analyzing all files for optimal batch processing...
+2025-08-09 15:31:29,829 - src.cli - INFO - Starting mega-batch translation of 35836 texts...
+2025-08-09 15:31:29,829 - src.translator - INFO - Processing batch 1/359 (100 items)
+2025-08-09 15:31:29,841 - src.translator - INFO - Processing batch 2/359 (100 items)
+2025-08-09 15:31:29,851 - src.translator - INFO - Processing batch 3/359 (100 items)
+2025-08-09 15:31:29,862 - src.translator - INFO - Processing batch 4/359 (100 items)
+2025-08-09 15:31:29,873 - src.translator - INFO - Processing batch 5/359 (100 items)
+2025-08-09 15:31:29,881 - src.translator - INFO - Processing batch 6/359 (100 items)
+2025-08-09 15:31:29,891 - src.translator - INFO - Processing batch 7/359 (100 items)
+2025-08-09 15:31:29,899 - src.translator - INFO - Processing batch 8/359 (100 items)
+2025-08-09 15:31:29,909 - src.translator - INFO - Processing batch 9/359 (100 items)
+2025-08-09 15:31:29,921 - src.translator - INFO - Processing batch 10/359 (100 items)
+2025-08-09 15:31:29,928 - src.translator - INFO - Processing batch 11/359 (100 items)
+2025-08-09 15:31:29,939 - src.translator - INFO - Processing batch 12/359 (100 items)
+2025-08-09 15:31:29,946 - src.translator - INFO - Processing batch 13/359 (100 items)
+2025-08-09 15:31:29,957 - src.translator - INFO - Processing batch 14/359 (100 items)
+2025-08-09 15:31:29,964 - src.translator - INFO - Processing batch 15/359 (100 items)
+2025-08-09 15:31:29,974 - src.translator - INFO - Processing batch 16/359 (100 items)
+2025-08-09 15:31:29,981 - src.translator - INFO - Processing batch 17/359 (100 items)
+2025-08-09 15:31:29,991 - src.translator - INFO - Processing batch 18/359 (100 items)
+2025-08-09 15:31:29,998 - src.translator - INFO - Processing batch 19/359 (100 items)
+2025-08-09 15:31:30,007 - src.translator - INFO - Processing batch 20/359 (100 items)
+2025-08-09 15:31:30,016 - src.translator - INFO - Processing batch 21/359 (100 items)
+2025-08-09 15:31:30,027 - src.translator - INFO - Processing batch 22/359 (100 items)
+2025-08-09 15:31:30,036 - src.translator - INFO - Processing batch 23/359 (100 items)
+2025-08-09 15:31:30,047 - src.translator - INFO - Processing batch 24/359 (100 items)
+2025-08-09 15:31:30,055 - src.translator - INFO - Processing batch 25/359 (100 items)
+2025-08-09 15:31:30,065 - src.translator - INFO - Processing batch 26/359 (100 items)
+2025-08-09 15:31:30,073 - src.translator - INFO - Processing batch 27/359 (100 items)
+2025-08-09 15:31:30,084 - src.translator - INFO - Processing batch 28/359 (100 items)
+2025-08-09 15:31:30,091 - src.translator - INFO - Processing batch 29/359 (100 items)
+2025-08-09 15:31:30,102 - src.translator - INFO - Processing batch 30/359 (100 items)
+2025-08-09 15:31:30,110 - src.translator - INFO - Processing batch 31/359 (100 items)
+2025-08-09 15:31:30,119 - src.translator - INFO - Processing batch 32/359 (100 items)
+2025-08-09 15:31:30,127 - src.translator - INFO - Processing batch 33/359 (100 items)
+2025-08-09 15:31:30,137 - src.translator - INFO - Processing batch 34/359 (100 items)
+2025-08-09 15:31:30,145 - src.translator - INFO - Processing batch 35/359 (100 items)
+2025-08-09 15:31:30,155 - src.translator - INFO - Processing batch 36/359 (100 items)
+2025-08-09 15:32:02,707 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-09 15:32:02,754 - src.translator - INFO - Processing batch 37/359 (100 items)
+2025-08-09 15:33:03,101 - openai._base_client - INFO - Retrying request to /chat/completions in 0.431929 seconds
+2025-08-09 15:34:04,284 - openai._base_client - INFO - Retrying request to /chat/completions in 0.845884 seconds
+2025-08-09 15:35:05,892 - src.translator - ERROR - Batch translation failed: Connection error.
+2025-08-09 15:35:05,893 - src.translator - INFO - Processing batch 38/359 (100 items)
+2025-08-09 15:36:06,705 - openai._base_client - INFO - Retrying request to /chat/completions in 0.495760 seconds

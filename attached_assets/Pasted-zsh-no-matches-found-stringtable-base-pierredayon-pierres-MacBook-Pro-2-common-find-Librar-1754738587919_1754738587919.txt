@@ -1,0 +1,17 @@
+zsh: no matches found: *.stringtable
+(base) pierredayon@pierres-MacBook-Pro-2 common % find ~/Library/Application\ Support/Steam -name "*.stringtable" -type f | head -10
+/Users/pierredayon/Library/Application Support/Steam/steamapps/common/Pillars of Eternity/PillarsOfEternity_Data/data/localized/pl/text/quests/07_gilded_vale/07_qst_buried_secrets.stringtable
+/Users/pierredayon/Library/Application Support/Steam/steamapps/common/Pillars of Eternity/PillarsOfEternity_Data/data/localized/pl/text/quests/07_gilded_vale/07_tsk_late_for_dinner.stringtable
+/Users/pierredayon/Library/Application Support/Steam/steamapps/common/Pillars of Eternity/PillarsOfEternity_Data/data/localized/pl/text/quests/07_gilded_vale/07_tsk_breaking_bread.stringtable
+/Users/pierredayon/Library/Application Support/Steam/steamapps/common/Pillars of Eternity/PillarsOfEternity_Data/data/localized/pl/text/quests/07_gilded_vale/07_qst_lords_of_a_barren_land.stringtable
+/Users/pierredayon/Library/Application Support/Steam/steamapps/common/Pillars of Eternity/PillarsOfEternity_Data/data/localized/pl/text/quests/07_gilded_vale/07_qst_mothers_plea.stringtable
+/Users/pierredayon/Library/Application Support/Steam/steamapps/common/Pillars of Eternity/PillarsOfEternity_Data/data/localized/pl/text/quests/07_gilded_vale/07_tsk_ferry_flotsam.stringtable
+/Users/pierredayon/Library/Application Support/Steam/steamapps/common/Pillars of Eternity/PillarsOfEternity_Data/data/localized/pl/text/quests/07_gilded_vale/07_qst_vengence_from_grave.stringtable
+/Users/pierredayon/Library/Application Support/Steam/steamapps/common/Pillars of Eternity/PillarsOfEternity_Data/data/localized/pl/text/quests/07_gilded_vale/07_qst_deathguard.stringtable
+/Users/pierredayon/Library/Application Support/Steam/steamapps/common/Pillars of Eternity/PillarsOfEternity_Data/data/localized/pl/text/quests/07_gilded_vale/07_qst_smiths_shipment.stringtable
+/Users/pierredayon/Library/Application Support/Steam/steamapps/common/Pillars of Eternity/PillarsOfEternity_Data/data/localized/pl/text/quests/test_journal_entry.stringtable
+(base) pierredayon@pierres-MacBook-Pro-2 common % cd /Users/pierredayon/Downloads/PillarTranslate
+(base) pierredayon@pierres-MacBook-Pro-2 PillarTranslate % cd /Users/pierredayon/Downloads/PillarTranslate
+cp -r "/path/to/game/localized/en/text/" "./input/localized/en/"
+cp: /path/to/game/localized/en/text/: No such file or directory
+(base) pierredayon@pierres-MacBook-Pro-2 PillarTranslate % 

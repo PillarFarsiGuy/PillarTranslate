@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<StringTableFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Name>12_bs_noonfrost_warning</Name><NextEntryID>2</NextEntryID><EntryCount>1</EntryCount><Entries><Entry ID=""><DefaultText>"بیشتر از این جلو نرو، مسافر. اگر می‌خواهی دعا کنی، می‌توانی به زیارتگاه جلوی معبد بروی."</DefaultText><FemaleText>"بیشتر از این جلو نرو، مسافر. اگر می‌خواهی دعا کنی، می‌توانی به زیارتگاه جلوی معبد بروی."</FemaleText></Entry></Entries></StringTableFile>

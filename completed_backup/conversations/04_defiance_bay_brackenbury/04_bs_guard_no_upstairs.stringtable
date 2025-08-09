@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<StringTableFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Name>04_bs_guard_no_upstairs</Name><NextEntryID>2</NextEntryID><EntryCount>1</EntryCount><Entries><Entry ID=""><DefaultText>"هیچ‌کس به طبقه بالا نمی‌رود مگر اینکه ابرکان اجازه دهد."</DefaultText><FemaleText>"هیچ‌کس به طبقه بالا نمی‌رود مگر اینکه ابرکان اجازه دهد."</FemaleText></Entry></Entries></StringTableFile>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StringTableFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>test_25_entries</Name>
+  <NextEntryID>26</NextEntryID>
+  <EntryCount>25</EntryCount>
+  <Entries>
+    <Entry ID="0"><DefaultText>New text 1</DefaultText><FemaleText /></Entry>
+    <Entry ID="1"><DefaultText>New text 2</DefaultText><FemaleText /></Entry>
+    <Entry ID="2"><DefaultText>New text 3</DefaultText><FemaleText /></Entry>
+    <Entry ID="3"><DefaultText>New text 4</DefaultText><FemaleText /></Entry>
+    <Entry ID="4"><DefaultText>New text 5</DefaultText><FemaleText /></Entry>
+    <Entry ID="5"><DefaultText>New text 6</DefaultText><FemaleText /></Entry>
+    <Entry ID="6"><DefaultText>New text 7</DefaultText><FemaleText /></Entry>
+    <Entry ID="7"><DefaultText>New text 8</DefaultText><FemaleText /></Entry>
+    <Entry ID="8"><DefaultText>New text 9</DefaultText><FemaleText /></Entry>
+    <Entry ID="9"><DefaultText>New text 10</DefaultText><FemaleText /></Entry>
+    <Entry ID="10"><DefaultText>New text 11</DefaultText><FemaleText /></Entry>
+    <Entry ID="11"><DefaultText>New text 12</DefaultText><FemaleText /></Entry>
+    <Entry ID="12"><DefaultText>New text 13</DefaultText><FemaleText /></Entry>
+    <Entry ID="13"><DefaultText>New text 14</DefaultText><FemaleText /></Entry>
+    <Entry ID="14"><DefaultText>New text 15</DefaultText><FemaleText /></Entry>
+    <Entry ID="15"><DefaultText>New text 16</DefaultText><FemaleText /></Entry>
+    <Entry ID="16"><DefaultText>New text 17</DefaultText><FemaleText /></Entry>
+    <Entry ID="17"><DefaultText>New text 18</DefaultText><FemaleText /></Entry>
+    <Entry ID="18"><DefaultText>New text 19</DefaultText><FemaleText /></Entry>
+    <Entry ID="19"><DefaultText>New text 20</DefaultText><FemaleText /></Entry>
+    <Entry ID="20"><DefaultText>New text 21</DefaultText><FemaleText /></Entry>
+    <Entry ID="21"><DefaultText>New text 22</DefaultText><FemaleText /></Entry>
+    <Entry ID="22"><DefaultText>New text 23</DefaultText><FemaleText /></Entry>
+    <Entry ID="23"><DefaultText>New text 24</DefaultText><FemaleText /></Entry>
+    <Entry ID="24"><DefaultText>New text 25</DefaultText><FemaleText /></Entry>
+  </Entries>
+</StringTableFile>

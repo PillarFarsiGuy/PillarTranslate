@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<StringTableFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Name>07_bs_gv_ambients_b</Name><NextEntryID>3</NextEntryID><EntryCount>2</EntryCount><Entries><Entry ID=""><DefaultText>"اگر بچه نباشد چه؟ شاید کولس توانسته-"</DefaultText><FemaleText>"اگر بچه نباشد چه؟ شاید کولس توانسته-"</FemaleText></Entry><Entry ID=""><DefaultText>"هیس. دیوانه‌ای؟ بگذار برای داخل."</DefaultText><FemaleText>"هیس. دیوانه‌ای؟ بگذار برای داخل."</FemaleText></Entry></Entries></StringTableFile>

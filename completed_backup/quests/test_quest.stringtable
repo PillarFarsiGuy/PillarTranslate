@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<StringTableFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Name>test_quest</Name><NextEntryID>4</NextEntryID><EntryCount>3</EntryCount><Entries><Entry ID=""><DefaultText /><FemaleText /></Entry><Entry ID=""><DefaultText /><FemaleText /></Entry><Entry ID=""><DefaultText /><FemaleText /></Entry></Entries></StringTableFile>

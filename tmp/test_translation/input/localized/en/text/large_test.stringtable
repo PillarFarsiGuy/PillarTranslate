@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StringTableFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>large_test</Name>
+  <NextEntryID>26</NextEntryID>
+  <EntryCount>25</EntryCount>
+  <Entries>
+    <Entry ID="0"><DefaultText>Hello player 1!</DefaultText><FemaleText /></Entry>
+    <Entry ID="1"><DefaultText>Hello player 2!</DefaultText><FemaleText /></Entry>
+    <Entry ID="2"><DefaultText>Hello player 3!</DefaultText><FemaleText /></Entry>
+    <Entry ID="3"><DefaultText>Hello player 4!</DefaultText><FemaleText /></Entry>
+    <Entry ID="4"><DefaultText>Hello player 5!</DefaultText><FemaleText /></Entry>
+    <Entry ID="5"><DefaultText>Hello player 6!</DefaultText><FemaleText /></Entry>
+    <Entry ID="6"><DefaultText>Hello player 7!</DefaultText><FemaleText /></Entry>
+    <Entry ID="7"><DefaultText>Hello player 8!</DefaultText><FemaleText /></Entry>
+    <Entry ID="8"><DefaultText>Hello player 9!</DefaultText><FemaleText /></Entry>
+    <Entry ID="9"><DefaultText>Hello player 10!</DefaultText><FemaleText /></Entry>
+    <Entry ID="10"><DefaultText>Hello player 11!</DefaultText><FemaleText /></Entry>
+    <Entry ID="11"><DefaultText>Hello player 12!</DefaultText><FemaleText /></Entry>
+    <Entry ID="12"><DefaultText>Hello player 13!</DefaultText><FemaleText /></Entry>
+    <Entry ID="13"><DefaultText>Hello player 14!</DefaultText><FemaleText /></Entry>
+    <Entry ID="14"><DefaultText>Hello player 15!</DefaultText><FemaleText /></Entry>
+    <Entry ID="15"><DefaultText>Hello player 16!</DefaultText><FemaleText /></Entry>
+    <Entry ID="16"><DefaultText>Hello player 17!</DefaultText><FemaleText /></Entry>
+    <Entry ID="17"><DefaultText>Hello player 18!</DefaultText><FemaleText /></Entry>
+    <Entry ID="18"><DefaultText>Hello player 19!</DefaultText><FemaleText /></Entry>
+    <Entry ID="19"><DefaultText>Hello player 20!</DefaultText><FemaleText /></Entry>
+    <Entry ID="20"><DefaultText>Hello player 21!</DefaultText><FemaleText /></Entry>
+    <Entry ID="21"><DefaultText>Hello player 22!</DefaultText><FemaleText /></Entry>
+    <Entry ID="22"><DefaultText>Hello player 23!</DefaultText><FemaleText /></Entry>
+    <Entry ID="23"><DefaultText>Hello player 24!</DefaultText><FemaleText /></Entry>
+    <Entry ID="24"><DefaultText>Hello player 25!</DefaultText><FemaleText /></Entry>
+  </Entries>
+</StringTableFile>
