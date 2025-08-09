@@ -1,28 +1,36 @@
-# CRITICAL REMINDER FOR AI ASSISTANT
+# CRITICAL: Preserve Your Completed Work
 
-## TOOL EXECUTION POLICY
-**NEVER EXECUTE THE TRANSLATION TOOL DIRECTLY**
-- The tool is meant to be downloaded by the user and run from their terminal
-- Do not run `python stringtable_fa_builder.py` commands
-- Only test basic functionality or help commands if absolutely necessary
-- Focus on code modification and file management only
+## When Downloading This Project
 
-## KEY PROJECT ISSUE TO REMEMBER
-**THE TOOL GETS STUCK AND STOPS TRANSLATING**
-- User reports tool stops processing files and gets stuck
-- This forces inefficient restarts that waste time and API calls
-- This is the MAIN PROBLEM to solve, not file validation
-- Focus on fixing the core translation loop and processing logic
+**BEFORE deleting your old version:**
 
-## USER WORKFLOW
-1. User downloads the tool
-2. User runs it from their own terminal with their OpenAI API key
-3. User reports back with results or issues
-4. AI assists with fixes and improvements
+1. **Copy your completed translations** from your old project to this new one:
+   ```
+   OLD PROJECT: out/localized/it/text/ 
+   NEW PROJECT: out/localized/it/text/
+   ```
 
-## MEMORY ISSUES TO ADDRESS
-- User frustrated with AI forgetting important context
-- Need better documentation and reminder systems
-- Update replit.md with key decisions and issues
+2. **Copy your translation cache** (saves API costs and time):
+   ```
+   OLD PROJECT: translation_cache.db
+   NEW PROJECT: translation_cache.db
+   ```
 
-This reminder must be read before every response to the user.
+## Quick Setup Steps
+
+1. Download this new project
+2. Copy the two items above from your old project
+3. Set your OpenAI API key: `export OPENAI_API_KEY=your_key_here`
+4. Run: `python stringtable_fa_builder.py build`
+
+## Current Progress Status
+- **542 files completed** (48.6% done)
+- **574 files remaining** (51.4%)
+- Tool will skip existing files and continue from where you left off
+
+## What's Fixed
+- File skipping logic corrected (won't re-process completed files)
+- Stability improvements (timeouts, retry logic, error handling)
+- Cache validation ensures quality translations
+
+The tool is ready to complete your Farsi language mod!
