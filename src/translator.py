@@ -43,7 +43,7 @@ class TranslationService:
         
         # Rate limiting
         self.last_request_time = 0
-        self.min_request_interval = 2.0  # 2 seconds between requests to avoid rate limits
+        self.min_request_interval = 0.5  # More reasonable 0.5 seconds between requests
     
     def _load_glossary(self) -> Dict[str, str]:
         """Load glossary from CSV file."""
@@ -163,29 +163,7 @@ class TranslationService:
         results = self._translate_batch_internal([text])
         return results[0] if results else text
     
-    def _is_valid_game_text(self, text: str) -> bool:
-        """Validate that text appears to be legitimate game content."""
-        if not text or not text.strip():
-            return False
-        
-        # Skip very short texts (likely not meaningful game content)
-        if len(text.strip()) < 3:
-            return False
-        
-        # Skip texts that look like file paths or system messages
-        if any(indicator in text.lower() for indicator in [
-            "c:\\", "/home/", "/usr/", ".exe", ".dll", ".so", ".dylib",
-            "python", "import", "from", "def ", "class ", "if __name__",
-            "error:", "warning:", "debug:", "info:", "traceback"
-        ]):
-            return False
-        
-        # Skip texts that are mostly numbers or special characters
-        alphanumeric_count = sum(1 for c in text if c.isalnum())
-        if alphanumeric_count < len(text) * 0.3:  # Less than 30% alphanumeric
-            return False
-        
-        return True
+
 
     def _translate_batch_internal(self, texts: List[str]) -> List[str]:
         """Internal method to translate multiple texts in a single API call."""
@@ -199,12 +177,6 @@ class TranslationService:
         for i, text in enumerate(texts):
             if not text or not text.strip():
                 results[i] = text
-                continue
-            
-            # Validate that this looks like legitimate game text
-            if not self._is_valid_game_text(text):
-                self.logger.warning(f"Skipping invalid/suspicious text: {text[:50]}...")
-                results[i] = text  # Keep original text instead of translating
                 continue
                 
             cached_translation = self.cache.get_translation(text)
@@ -253,15 +225,16 @@ class TranslationService:
                 batch_text = "\n".join(batch_items)
                 user_prompt = f"Translate these texts to Farsi:\n{batch_text}"
                 
-                # Make API request
+                # Make API request with timeout
                 response = self.client.chat.completions.create(
                     model=self.model,
                     messages=[
                         {"role": "system", "content": system_prompt},
                         {"role": "user", "content": user_prompt}
                     ],
-                    max_tokens=4000,  # Moderate size for reliability
-                    temperature=0.3
+                    max_tokens=3000,  # Smaller for faster response
+                    temperature=0.3,
+                    timeout=self.config.request_timeout  # Add timeout to prevent hanging
                 )
                 
                 # If successful, break out of retry loop
@@ -273,28 +246,32 @@ class TranslationService:
                 # Check if it's a rate limit error
                 if "rate limit" in error_msg or "too many requests" in error_msg or "429" in error_msg:
                     if attempt < max_retries:
-                        wait_time = (2 ** attempt) * self.config.retry_delay  # Exponential backoff
+                        wait_time = min(10.0, self.config.retry_delay * (attempt + 1))  # Cap wait time at 10 seconds
                         self.logger.warning(f"Rate limit hit. Waiting {wait_time}s before retry {attempt + 1}/{max_retries}")
                         time.sleep(wait_time)
                         continue
                     else:
                         self.logger.error(f"Rate limit exceeded after {max_retries} retries")
-                        raise
+                        # Don't raise - continue with original text to avoid complete failure
+                        break
                 
                 # Check for other retryable errors
                 elif any(err in error_msg for err in ["timeout", "connection", "server error", "503", "502", "500"]):
                     if attempt < max_retries:
-                        wait_time = self.config.retry_delay * (attempt + 1)
+                        wait_time = min(5.0, self.config.retry_delay * (attempt + 1))  # Cap at 5 seconds
                         self.logger.warning(f"Transient error: {e}. Retrying in {wait_time}s...")
                         time.sleep(wait_time)
                         continue
                     else:
                         self.logger.error(f"Request failed after {max_retries} retries: {e}")
-                        raise
+                        # Don't raise - continue with original text to avoid complete failure
+                        break
                 
                 # Non-retryable error
                 else:
-                    raise
+                    self.logger.error(f"Non-retryable error: {e}")
+                    # Don't raise - continue with original text to avoid complete failure
+                    break
         
         # Process the successful response
         if response:

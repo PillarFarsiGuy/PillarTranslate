@@ -85,19 +85,13 @@ def build_command(input_dir: str, output_dir: str = "out") -> None:
                 processed_files += 1
                 continue
             
-            # Extract texts for translation with additional validation
-            texts_to_translate = []
-            for entry in entries:
-                text = entry["text"].strip()
-                if text and translator._is_valid_game_text(text):
-                    texts_to_translate.append(text)
+            # Extract texts for translation
+            texts_to_translate = [entry["text"] for entry in entries if entry["text"].strip()]
             
             if not texts_to_translate:
-                # No valid texts to translate, just copy structure
-                logger.info(f"No valid game text found in {relative_path}, copying structure only")
+                # No texts to translate, just copy structure
                 translated_entries = entries
             else:
-                logger.info(f"Found {len(texts_to_translate)} valid text entries to translate in {relative_path}")
                 # Translate texts
                 translated_texts = translator.translate_batch(texts_to_translate, batch_size=config.batch_size)
                 
@@ -106,15 +100,10 @@ def build_command(input_dir: str, output_dir: str = "out") -> None:
                 text_index = 0
                 for entry in entries:
                     new_entry = entry.copy()
-                    original_text = entry["text"].strip()
-                    if original_text and translator._is_valid_game_text(original_text):
+                    if entry["text"].strip():
                         if text_index < len(translated_texts):
                             new_entry["text"] = translated_texts[text_index]
                             text_index += 1
-                        else:
-                            # Keep original if translation failed
-                            logger.warning(f"No translation available for: {original_text[:50]}...")
-                    # Keep original text for invalid entries (preserves structure)
                     translated_entries.append(new_entry)
             
             # Ensure output directory exists
@@ -128,9 +117,23 @@ def build_command(input_dir: str, output_dir: str = "out") -> None:
             
         except Exception as e:
             logger.error(f"Failed to process {file_path}: {e}")
+            processed_files += 1  # Count failed files as processed to maintain progress
+            
+            # Create an empty output file to mark as attempted
+            try:
+                output_file_path.parent.mkdir(parents=True, exist_ok=True)
+                output_file_path.write_text(f'<!-- Translation failed: {e} -->')
+                logger.warning(f"Created placeholder file for failed translation: {output_file_path}")
+            except Exception as write_error:
+                logger.error(f"Could not create placeholder file: {write_error}")
             continue
     
-    logger.info(f"Translation build complete! Processed {processed_files}/{total_files} files")
+    success_rate = (processed_files / total_files * 100) if total_files > 0 else 0
+    logger.info(f"Translation build complete! Processed {processed_files}/{total_files} files ({success_rate:.1f}% success rate)")
+    
+    if processed_files < total_files:
+        remaining = total_files - processed_files
+        logger.warning(f"{remaining} files were skipped or failed. Check logs for details.")
 
 def main():
     """Main entry point for the CLI."""

@@ -16,9 +16,10 @@ class Config:
     openai_api_key: Optional[str]
     target_language: str = "Farsi"
     glossary_file: Optional[Path] = None
-    batch_size: int = 20  # Reliable batch size to avoid timeouts
-    max_retries: int = 3
-    retry_delay: float = 1.0
+    batch_size: int = 15  # Smaller batch size for reliability
+    max_retries: int = 2  # Fewer retries to avoid getting stuck
+    retry_delay: float = 2.0  # Base delay for retries
+    request_timeout: float = 60.0  # 60 second timeout for API requests
     
     def __post_init__(self):
         """Validate configuration after initialization."""
