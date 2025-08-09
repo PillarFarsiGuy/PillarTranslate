@@ -56,20 +56,12 @@ def build_command(input_dir: str, output_dir: str = "out") -> None:
         # Map to Italian language slot in output
         output_file_path = output_path / "localized" / "it" / "text" / relative_path
         
-        # CHECK OUTPUT FILE INSTEAD OF CACHE - ENHANCED PRESERVATION
-        if output_file_path.exists():
-            # Verify the existing file is valid and complete
-            try:
-                existing_entries = xml_processor.parse_stringtable(output_file_path)
-                if existing_entries:  # File exists and has content
-                    logger.info(f"Skipping existing completed file ({processed_files + 1}/{total_files}): {relative_path}")
-                    processed_files += 1
-                    continue
-                else:
-                    logger.warning(f"Found empty output file, will regenerate: {relative_path}")
-            except Exception as e:
-                logger.warning(f"Found corrupted output file, will regenerate: {relative_path} - {e}")
-            # If file is empty or corrupted, continue to regenerate it
+        # CHECK OUTPUT FILE - STRICT SKIPPING
+        if output_file_path.exists() and output_file_path.stat().st_size > 100:
+            # File exists and has reasonable size - skip it
+            logger.info(f"Skipping existing file ({processed_files + 1}/{total_files}): {relative_path}")
+            processed_files += 1
+            continue
         
         logger.info(f"Processing ({processed_files + 1}/{total_files}): {relative_path}")
         

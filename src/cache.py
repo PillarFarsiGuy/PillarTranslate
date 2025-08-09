@@ -61,8 +61,11 @@ class TranslationCache:
                 )
                 result = cursor.fetchone()
                 
-                if result:
-                    return result[0]
+                if result and result[0]:
+                    # Only return non-empty translations that are different from original
+                    translated = result[0].strip()
+                    if len(translated) > 0 and translated != original_text.strip():
+                        return result[0]
                 
         except sqlite3.Error as e:
             self.logger.error(f"Cache lookup failed: {e}")

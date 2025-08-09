@@ -17,6 +17,10 @@ The Pillars of Eternity Farsi Translation Tool is a Python CLI application that 
   - Changed error handling to continue rather than crash
   - Added progress tracking to prevent infinite loops
   - Smaller batch sizes (15 instead of 20) for reliability
+- **CRITICAL FILE SKIPPING ISSUE** (Aug 9, 2025):
+  - Tool was re-processing already completed files instead of skipping them
+  - Fixed file-checking logic to properly skip existing completed files
+  - Tool should now only process the remaining 574 unprocessed files
 
 # User Preferences
 

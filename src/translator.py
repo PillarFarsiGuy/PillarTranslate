@@ -153,10 +153,10 @@ class TranslationService:
         if not text or not text.strip():
             return text
         
-        # Check cache first
+        # Check cache first - but only use cache for exact matches
         cached_translation = self.cache.get_translation(text)
-        if cached_translation:
-            self.logger.debug(f"Using cached translation for: {text[:50]}...")
+        if cached_translation and len(cached_translation.strip()) > 0:
+            self.logger.debug(f"Using cached translation for: {text[:30]}...")
             return cached_translation
         
         # For single text, use batch processing with size 1
@@ -180,7 +180,7 @@ class TranslationService:
                 continue
                 
             cached_translation = self.cache.get_translation(text)
-            if cached_translation:
+            if cached_translation and len(cached_translation.strip()) > 0:
                 results[i] = cached_translation
                 self.logger.debug(f"Using cached translation for: {text[:30]}...")
             else:
