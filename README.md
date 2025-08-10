@@ -1,6 +1,6 @@
 # Pillars of Eternity Farsi Translation Tool
 
-HELP ME acutally make this translation into a workable mod if you are interested in playing pillars of eternity in Farsi. I thought that this is a popular and beloved rpg game which: 1. might make a really useful language learning tool for peopel who have already played the game a million times like me. 2. Will open up a door of a classic in the RPG genre to an extremly underserved language group.
+Help me acutally make this translation into a workable mod if you are interested in playing pillars of eternity in Farsi. I thought that this is a popular and beloved rpg game which: 1. might make a really useful language learning tool for peopel who have already played the game a million times like me. 2. Will open up a door of a classic in the RPG genre to an extremly underserved language group.
 
 GO TO "out" to access the fully transalted game files
 
