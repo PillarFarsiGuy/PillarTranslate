@@ -1,81 +1,14 @@
 # Pillars of Eternity Farsi Translation Tool
 
-Creates a complete Farsi language mod for Pillars of Eternity using OpenAI translation.
+HELP ME acutally make this translation into a workable mod if you are interested in playing pillars of eternity in Farsi. I thought that this is a popular and beloved rpg game which: 1. might make a really useful language learning tool for peopel who have already played the game a million times like me. 2. Will open up a door of a classic in the RPG genre to an extremly underserved language group.
 
-## 🎯 What This Creates
-- **Complete Farsi language mod** for Pillars of Eternity
-- **1,116 game text files** translated (conversations, quests, UI, items)
-- **Safe installation** into Italian language slot
-- **Easy switching** between English and Farsi in-game
+GO TO "out" to access the fully transalted game files
 
-## 🚀 Quick Start
 
-### First Time Setup
-```bash
-# 1. Set your OpenAI API key
-export OPENAI_API_KEY=your_key_here
+Everything else is an AI generated tool made by Replit to translate said file using an openAI API key.
+The whole process costs about 18$ but I do not recommend running it yourself. The tool is now useless because the files are translated.
+I am only uploading the rest of the tool in case anyone out there can use it to translate other games. I am done with it.
+Also, it does not work without a LOT of editing live. The large majority of this code is AI generated and I have no idea how it works. Amazing what we can do now huh? I'm a history major and I have no idea how to use a computer beyond outside of Jstor and google docs. Theres a lot of usless junk in this code left over from me fenagling with it. 
 
-# 2. Start translation
-python stringtable_fa_builder.py build
-```
 
-### Resuming Work (if you have previous version)
-```bash
-# 1. Copy from your old project:
-#    - out/localized/it/text/ (completed translations)
-#    - translation_cache.db (translation cache)
 
-# 2. Check your progress
-python preserve_progress.py
-
-# 3. Continue translation
-python stringtable_fa_builder.py build
-```
-
-## 📊 Current Status
-- **542 files completed** (48.6% done)
-- **574 files remaining** (51.4%)
-- Tool automatically skips completed files
-
-## 🎮 Installing the Farsi Mod
-
-1. **Copy** `out/localized/it/` to your game's `localized/` directory
-2. **In game**: Options → Language → Italiano
-3. **Restart** the game
-4. **Enjoy** Pillars of Eternity in Farsi!
-
-See `INSTALLATION_GUIDE.md` for detailed instructions.
-
-## 📁 Project Structure
-```
-├── stringtable_fa_builder.py  # Main CLI tool
-├── src/                       # Core modules
-├── Input/                     # Game text files (1,116 total)
-├── out/localized/it/text/     # Completed Farsi translations
-├── translation_cache.db       # Translation cache (saves API costs)
-└── translation.log           # Progress logs
-```
-
-## 🛠️ Commands
-```bash
-# Translate files
-python stringtable_fa_builder.py build
-
-# Preview what will be translated (no API calls)
-python stringtable_fa_builder.py dry-run
-
-# Verify existing translations
-python stringtable_fa_builder.py verify
-
-# Check progress
-python preserve_progress.py
-```
-
-## 🔧 Features
-- **Smart caching** prevents re-translation
-- **Preserves game formatting** and placeholders
-- **Handles API rate limits** automatically
-- **Comprehensive logging** of progress
-- **Safe game integration** via Italian language slot
-
-The tool creates a professional-quality Farsi language experience for Pillars of Eternity players!
