@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<StringTableFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Name>07_bs_forton_bystanders</Name><NextEntryID>3</NextEntryID><EntryCount>2</EntryCount><Entries><Entry ID=""><DefaultText>«یکی دیگه هم رفت...»</DefaultText><FemaleText>«یکی دیگه هم رفت...»</FemaleText></Entry><Entry ID=""><DefaultText>«خب، پول رو بده. اون خارجی دیگه برنده شد.»</DefaultText><FemaleText>«خب، پول رو بده. اون خارجی دیگه برنده شد.»</FemaleText></Entry></Entries></StringTableFile>

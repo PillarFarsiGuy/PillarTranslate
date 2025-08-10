@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<StringTableFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Name>00_cv_merdreth_man</Name><NextEntryID>3</NextEntryID><EntryCount>2</EntryCount><Entries><Entry ID=""><DefaultText>«ما؟ ما فقط به کار خودمان مشغولیم.»</DefaultText><FemaleText>«ما؟ ما فقط به کار خودمان مشغولیم.»</FemaleText></Entry><Entry ID=""><DefaultText>«ما به سرعت کارشان را تمام کردیم.»</DefaultText><FemaleText>«ما به سرعت کارشان را تمام کردیم.»</FemaleText></Entry></Entries></StringTableFile>

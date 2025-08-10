@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<StringTableFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Name>06_bs_visitor_relative</Name><NextEntryID>3</NextEntryID><EntryCount>2</EntryCount><Entries><Entry ID=""><DefaultText>"سرورم - آمده‌ام تا طلب بخشش کنم..."</DefaultText><FemaleText>"سرورم - آمده‌ام تا طلب بخشش کنم..."</FemaleText></Entry><Entry ID=""><DefaultText>"مطمئنم که می‌توانیم به توافقی برسیم."</DefaultText><FemaleText>"مطمئنم که می‌توانیم به توافقی برسیم."</FemaleText></Entry></Entries></StringTableFile>

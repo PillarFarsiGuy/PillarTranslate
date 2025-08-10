@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<StringTableFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Name>cm_poi_ogre_bones</Name><NextEntryID>3</NextEntryID><EntryCount>2</EntryCount><Entries><Entry ID=""><DefaultText>گره بانک ۱</DefaultText><FemaleText>گره بانک ۱</FemaleText></Entry><Entry ID=""><DefaultText>"کسی خیلی شلخته غذا می‌خورد."</DefaultText><FemaleText>"کسی خیلی شلخته غذا می‌خورد."</FemaleText></Entry></Entries></StringTableFile>

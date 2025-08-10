@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<StringTableFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Name>02_bs_riot_animancers_surrounded</Name><NextEntryID>3</NextEntryID><EntryCount>2</EntryCount><Entries><Entry ID=""><DefaultText>"این برای میراث است!"</DefaultText><FemaleText>"این برای میراث است!"</FemaleText></Entry><Entry ID=""><DefaultText>"قاتلان!"</DefaultText><FemaleText>"قاتلان!"</FemaleText></Entry></Entries></StringTableFile>

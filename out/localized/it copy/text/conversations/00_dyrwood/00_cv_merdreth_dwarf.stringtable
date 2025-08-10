@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<StringTableFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Name>00_cv_merdreth_dwarf</Name><NextEntryID>3</NextEntryID><EntryCount>2</EntryCount><Entries><Entry ID=""><DefaultText>"با مدرت صحبت کن."</DefaultText><FemaleText>"با مدرت صحبت کن."</FemaleText></Entry><Entry ID=""><DefaultText>"خوب انجام دادی."</DefaultText><FemaleText>"خوب انجام دادی."</FemaleText></Entry></Entries></StringTableFile>

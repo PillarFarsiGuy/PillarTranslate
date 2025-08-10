@@ -1,2 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<StringTableFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Name>04_bs_reymont_guard</Name><NextEntryID>3</NextEntryID><EntryCount>2</EntryCount><Entries><Entry ID=""><DefaultText>"آیا آن را شنیدی؟ از طرف پنجره آمد."</DefaultText><FemaleText>"آیا آن را شنیدی؟ از طرف پنجره آمد."</FemaleText></Entry><Entry ID=""><DefaultText>"مزاحمان!"</DefaultText><FemaleText>"مزاحمان!"</FemaleText></Entry></Entries></StringTableFile>

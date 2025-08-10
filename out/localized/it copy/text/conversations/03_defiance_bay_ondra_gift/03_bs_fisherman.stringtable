@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<StringTableFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Name>03_bs_fisherman</Name><NextEntryID>2</NextEntryID><EntryCount>1</EntryCount><Entries><Entry ID=""><DefaultText>"جزر دریا بالاست. اگر می‌خواهید به خط ساحلی بروید، باید تا روشنایی روز صبر کنید."</DefaultText><FemaleText>"جزر دریا بالاست. اگر می‌خواهید به خط ساحلی بروید، باید تا روشنایی روز صبر کنید."</FemaleText></Entry></Entries></StringTableFile>

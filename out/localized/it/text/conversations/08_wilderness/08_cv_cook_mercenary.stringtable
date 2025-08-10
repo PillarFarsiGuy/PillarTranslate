@@ -1,2 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<StringTableFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Name>08_cv_cook_mercenary</Name><NextEntryID>3</NextEntryID><EntryCount>2</EntryCount><Entries><Entry ID=""><DefaultText>"بهتره که گم بشی."</DefaultText><FemaleText>"بهتره که گم بشی."</FemaleText></Entry><Entry ID=""><DefaultText>"برای تازه‌کارهایی مثل تو وقتی ندارم."</DefaultText><FemaleText>"برای تازه‌کارهایی مثل تو وقتی ندارم."</FemaleText></Entry></Entries></StringTableFile>

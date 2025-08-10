@@ -1,2 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<StringTableFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Name>07_bs_villagers_misc_barks</Name><NextEntryID>3</NextEntryID><EntryCount>2</EntryCount><Entries><Entry ID=""><DefaultText>"تا حالا به Defiance Bay رفته‌ای؟"</DefaultText><FemaleText>"تا حالا به Defiance Bay رفته‌ای؟"</FemaleText></Entry><Entry ID=""><DefaultText>"با این وضعیت جاده‌ها؟ همین‌جا می‌مانم."</DefaultText><FemaleText>"با این وضعیت جاده‌ها؟ همین‌جا می‌مانم."</FemaleText></Entry></Entries></StringTableFile>

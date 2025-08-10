@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<StringTableFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Name>03_bs_drunk</Name><NextEntryID>3</NextEntryID><EntryCount>2</EntryCount><Entries><Entry ID=""><DefaultText>"*هیک*"</DefaultText><FemaleText>"*هیک*"</FemaleText></Entry><Entry ID=""><DefaultText>"*آروغ*"</DefaultText><FemaleText>"*آروغ*"</FemaleText></Entry></Entries></StringTableFile>

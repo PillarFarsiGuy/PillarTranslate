@@ -1,2 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<StringTableFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Name>04_bs_house_guard_welcome</Name><NextEntryID>2</NextEntryID><EntryCount>1</EntryCount><Entries><Entry ID=""><DefaultText>"ارباب دومنل منتظر شماست."</DefaultText><FemaleText>"ارباب دومنل منتظر شماست."</FemaleText></Entry></Entries></StringTableFile>
